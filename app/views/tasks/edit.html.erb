@@ -1,0 +1,10 @@
+<h1>Edit tasks</h1>
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %><br />
+  <p>Completed <%= f.check_box :completed %></p>
+  <%= f.submit %>
+<% end %>
+<%= link_to "Go Back to list", tasks_path %>
